@@ -1,0 +1,1 @@
+Biasa Om... bisa npm start atau yarn start yak.
