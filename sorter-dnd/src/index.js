@@ -1,19 +1,36 @@
 	import { render } from 'react-dom'
 	import Example from './example'
+	import Tree from './Tree'
 	import { DndProvider } from 'react-dnd'
 	import { HTML5Backend } from 'react-dnd-html5-backend'
+	import {
+	  BrowserRouter as Router,
+	  Switch,
+	  Route,
+	  Link
+	} from "react-router-dom";
 	
 	function App() {
 		return (
+		<Router>
 			<div className="App">
 				 <center>				
-				  <a href="/">Drag n Drop Form Sorting</a><br />
-				  <a href="/Tree">Drag n Drop Tree Sub Modul</a><br /><br />
+				  <Link to="/">Drag n Drop Form Sorting</Link><br />
+				  <Link to="/Tree">Drag n Drop Tree Sub Modul</Link><br /><br />
 			  </center>
+			<Switch>
+			  <Route exact path="/">
 				<DndProvider backend={HTML5Backend}>
 									<Example />
 				</DndProvider>
+			  </Route>
+			  <Route path="/Tree">
+				<Tree />
+			  </Route>
+			  	</Switch>	
+			  
 			</div>
+		</Router>
 		)
 	}
 
