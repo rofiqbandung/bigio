@@ -9,8 +9,8 @@ const style = {
 	borderRadius: '25px',
 	border: '2px solid grey',
 	padding: '20px',
-	width: '800px',
-	height: '150px',
+	width: '97%',
+	
 }
 
 const divDalam = {
@@ -82,11 +82,11 @@ export const Card = ({ id, text, textDalam1, textDalam2, textDalam3, index, move
   drag(drop(ref))
   return (
     <div ref={ref} style={{ ...style, opacity }} data-handler-id={handlerId}>
-			<div style={{ ...divDalam, opacity }} >{textDalam1}</div>
-			<div style={{ ...divDalam, opacity }} >{textDalam2}</div>
-			<div style={{ ...divDalam, opacity }} >{textDalam3}</div>
+			<div style={{ ...divDalam, opacity }} ><select name="combo1"><option value="Option 1">Pilihan 1</option><option value="Option 2">Pilihan 2</option></select></div>
+			<div style={{ ...divDalam, opacity }} ><input type="text" name="nama" /></div>
+			<div style={{ ...divDalam, opacity }} ><input type="date" name="tanggallahir" /></div>
 
-      {text}
+      <br />
     </div>
   )
 }

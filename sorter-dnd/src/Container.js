@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const style = {
-  width: 400,
+  width: '100%',
 }
 export const Container = () => {
   {
