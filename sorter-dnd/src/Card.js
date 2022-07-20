@@ -81,7 +81,7 @@ export const Card = ({ id, text, textDalam1, textDalam2, textDalam3, index, move
   const opacity = isDragging ? 0 : 1
   drag(drop(ref))
   return (
-    <div ref={ref} style={{ ...style, opacity }} data-handler-id={handlerId}>
+    <div ref={ref} style={{ ...style, opacity }} data-handler-id={handlerId}>Form {text} <br /> 
 			<div style={{ ...divDalam, opacity }} ><select name="combo1"><option value="Option 1">Pilihan 1</option><option value="Option 2">Pilihan 2</option></select></div>
 			<div style={{ ...divDalam, opacity }} ><input type="text" name="nama" /></div>
 			<div style={{ ...divDalam, opacity }} ><input type="date" name="tanggallahir" /></div>
