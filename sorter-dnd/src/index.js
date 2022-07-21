@@ -1,6 +1,6 @@
 	import { render } from 'react-dom'
 	import Example from './example'
-	import Tree from './Tree'
+	import Nested from './nested'
 	import { DndProvider } from 'react-dnd'
 	import { HTML5Backend } from 'react-dnd-html5-backend'
 	import {
@@ -16,7 +16,7 @@
 			<div className="App">
 				 <center>				
 				  <Link to="/">Drag n Drop Form Sorting</Link><br />
-				  <Link to="/Tree">Drag n Drop Tree Sub Modul</Link><br /><br />
+				  <Link to="/Nested">Drag n Drop Tree Sub Modul</Link><br /><br />
 			  </center>
 			<Switch>
 			  <Route exact path="/">
@@ -24,8 +24,8 @@
 									<Example />
 				</DndProvider>
 			  </Route>
-			  <Route path="/Tree">
-				<Tree />
+			  <Route path="/Nested">
+				<Nested />
 			  </Route>
 			  	</Switch>	
 			  
